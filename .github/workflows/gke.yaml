@@ -39,11 +39,11 @@ jobs:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         with: 
           service_account_key: ${{ secrets.GCP_TOKEN }}
-          project_id: kube-project-374416
+          project_id: kube-project-385314
 
       - name: GKE credentials
         run: |-
-          gcloud container clusters get-credentials apc-pn --region us-east1 --project kube-project-374416
+          gcloud container clusters get-credentials apc-pn --region us-east1 --project kube-project-385314
    
       - name: Apply the yaml file
         run: |
