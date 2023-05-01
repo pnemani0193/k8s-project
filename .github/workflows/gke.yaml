@@ -29,8 +29,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         env: 
+          server : ${{ secrets.API_SERVER }}
           gcloud_token : ${{ secrets.GCP_TOKEN }}
         run: |
-          ./run.sh $gcloud_token 
+          ./run.sh $server $gcloud_token 
 
        
