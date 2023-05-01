@@ -28,9 +28,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        env: |
+          GLOUD_OAUTH_ACCESS_TOKEN: ${{ secrets.GCP_TOKEN}}
         run: |
           gcloud config set project kube-project-385314
-          gcloud container  clusters get-credentials apc-pn --region us-east1 --project kube-project-385314
           kubectl apply -f ds1.yaml 
 
-     
+       
