@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flaskapp
-          image: gcr.io/kube-project-385314/flaskapp:1.0.1
+          image: gcr.io/kube-project-385314/flaskapp:1.0.0
           ports:
             - containerPort: 8000
 
